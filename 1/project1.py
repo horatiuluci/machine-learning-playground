@@ -34,7 +34,7 @@ def get_lasso_coef(X_train, y_train, model):
 
 
 def lasso_100_compare(X_train, y_train, X_test, y_test):
-    alpha_range = np.linspace(0.01, 1.0, num=500)
+    alpha_range = np.linspace(0.01, 1.0, num=100)
     # print(alpha_range)
     predictions = []
     for i in alpha_range:
@@ -72,7 +72,7 @@ def main():
     # data intercept
 
 
-    X_train, X_test, y_train, y_test = sklearn.model_selection.train_test_split(df.iloc[:, :-1], df.iloc[:, -1:], test_size=0.3, random_state=42)
+    X_train, X_test, y_train, y_test = sklearn.model_selection.train_test_split(df.iloc[:, :-1], df.iloc[:, -1:], test_size=0.1, random_state=42)
     betas = estimate_coef(X_train, y_train)
     print('weights as computed using OLS:')
     print(betas)
@@ -113,7 +113,7 @@ def main():
     lasso_100_compare(X_train, y_train, X_test.to_numpy(), y_test_)
 
     # print(type(df))
-    # df.to_csv('file1.csv', index=True)
+    df.to_csv('file1.csv', index=True)
 
 
 if __name__ == '__main__':
