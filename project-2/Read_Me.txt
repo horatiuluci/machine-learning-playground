@@ -1,7 +1,7 @@
 in order to run the code:
 
 # navigate to source code
-cd /path/to/horatiuluci-ml-project2/source_code
+cd /path/to/project-2/source_code
 
 # create new pytohn3 virtula environment
 python3 -m venv ml-env
