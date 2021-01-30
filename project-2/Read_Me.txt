@@ -13,4 +13,4 @@ source ml-env/bin/activate
 python3 -m pip install -r requirements.txt
 
 # run the code
-python3 horatiuluci-project-2.py
+python3 project-2.py
